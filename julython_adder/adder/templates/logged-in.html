@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+You are logged in as {{ user }}
+
+<div>
+  <form action="{% url logged-in %}" method="POST">{% csrf_token %}
+  {{ repo_form }}
+  <input type="submit" value="Hook my Repos">
+  </form>
+</div>
+{% endblock content %}
+
