@@ -43,7 +43,7 @@ def logged_in(request):
     while more:
         more = False
         res = requests.get(endpoint)
-        if not link in res.headers:
+        if not 'link' in res.headers:
             break
         links = res.headers['link'].split(',')
         for link in links:
