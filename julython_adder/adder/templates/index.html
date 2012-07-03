@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Login using <a rel="nofollow" href="{% url socialauth_begin 'github' %}">github</a>
+      <div class="hero-unit">
+        <h1>Julython-Adder</h1>
+        <p>This is a tool that makes it easy to add the julython hook to your GitHub projects. All you have to do is sign in with GitHub, select what repos you want to have the hooks and then press the "Hook My Repos" button!</p>
+        <p><a href="{% url socialauth_begin 'github' %}" class="btn btn-primary btn-large">Sign In with GitHub</a></p>
+      </div>
 {% endblock content %}
